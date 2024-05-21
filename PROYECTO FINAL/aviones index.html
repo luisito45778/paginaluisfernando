@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aviones</title>
+    <link rel="stylesheet" href="stile imagen de aviones.css">
+</head>
+<body>
+    <center><h1>aviones de acrobacias</h1></center>
+    <h2>Los aviones de acrobacias son aeronaves diseñadas y modificadas específicamente para realizar maniobras aéreas extremas y emocionantes durante exhibiciones y competiciones.</h2>
+     
+    <style>
+        /* Estilo de los bordes de neón */
+        .neon-border {
+            color: #fff; /* Color del texto */
+            text-align: center;
+            font-size: 24px;
+            padding: 20px;
+            border: 2px solid #00ff00; /* Color del borde */
+            border-radius: 10px; /* Radio de borde */
+            position: relative;
+        }
+
+        .neon-border::before,
+        .neon-border::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #00ff00; /* Color del borde */
+            border-radius: 10px; /* Radio de borde */
+            z-index: -1;
+        }
+
+        .neon-border::before {
+            top: -5px;
+            left: -5px;
+            animation: neon-glow 1.5s ease-in-out infinite alternate;
+        }
+
+        .neon-border::after {
+            bottom: -5px;
+            right: -5px;
+            animation: neon-glow 1.5s ease-in-out infinite alternate-reverse;
+        }
+
+        /* Animación de brillo */
+        @keyframes neon-glow {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.5;
+            }
+        }
+        .btn-a{
+      display: inline-block;
+      margin: 25px;
+      background-color: blueviolet;
+      padding: 20px;
+      color: azure;
+      text-decoration: none;
+    }
+    </style>
+
+
+<title>Lista de Aviones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            padding: 10px;
+            position: relative;
+        }
+
+        li::before,
+        li::after {
+            content: '';
+            position: absolute;
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            top: -5px;
+            left: -5px;
+            z-index: -1;
+        }
+
+        li::after {
+            border: 2px solid #00ff00;
+            top: 5px;
+            left: 5px;
+            animation: neon-glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes neon-glow {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Lista de Aviones</h2>
+    <ul>
+        <li>Boeing 747</li>
+        <li>Airbus A380</li>
+        <li>Lockheed Martin F-22 Raptor</li>
+        <li>Sukhoi Su-57</li>
+        <li>Embraer E195-E2</li>
+    </ul>
+</div>
+
+<a class="btn-a" href="PAGINA.INDEX.HTML">Pagina Principal</a>
+
+<h2>Calculadora de Citas</h2>
+
+<p>Introduce la cantidad de días hábiles que necesitas para sacar tu cita:</p>
+
+<input type="number" id="diasHabiles" min="1" max="30" value="1">
+<button onclick="calcularCita()">Calcular Cita</button>
+
+<p id="resultado"></p>
+
+<script>
+    function calcularCita() {
+        var diasHabiles = parseInt(document.getElementById("diasHabiles").value);
+        var fechaActual = new Date();
+        var contadorDias = 0;
+
+        while (contadorDias < diasHabiles) {
+            fechaActual.setDate(fechaActual.getDate() + 1);
+            if (fechaActual.getDay() !== 0 && fechaActual.getDay() !== 6) {
+                contadorDias++;
+            }
+        }
+
+        var dia = fechaActual.getDate();
+        var mes = fechaActual.getMonth() + 1;
+        var año = fechaActual.getFullYear();
+
+        var fechaCita = dia + "/" + mes + "/" + año;
+        document.getElementById("resultado").innerHTML = "Puedes sacar tu cita el " + fechaCita + ".";
+    }
+
+</body>
+</html>
+
+<div class="neon-border">
+    aviones
+</div>

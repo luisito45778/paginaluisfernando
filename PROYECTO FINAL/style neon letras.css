@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #8a2be2; /* Color morado */
+    border-radius: 10px;
+    position: relative;
+}
+
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border: 2px solid #8a2be2; /* Color morado */
+    border-radius: 10px;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+}
+
+.container::after {
+    border: 2px solid #8a2be2; /* Color morado */
+    top: 10px;
+    left: 10px;
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+h1, p {
+    color: #fff;
+    text-align: center;
+}
